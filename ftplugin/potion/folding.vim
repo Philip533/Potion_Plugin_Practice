@@ -15,7 +15,7 @@ function! GetPotionFold(lnum)
           return this_indent
      elseif next_indent > this_indent
           return '>' . next_indent
-     end if
+     endif
 
 endfunction
 
@@ -30,7 +30,7 @@ function! NextNonBlankLine(lnum)
      while current <= numlines
           if getline(current) =~? '\v\S'
                return current
-          end if
+          endif
 
           let current += 1
      endwhile
